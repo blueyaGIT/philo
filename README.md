@@ -47,8 +47,8 @@ _** = Each output is preceded by a timestamp (in milliseconds)._
 This project is part of the curriculum for the 42 School. It's designed to help students learn about multithreading and synchronization in C.
 
 
-## 🚀 Next Project
-<!-- 
+<!-- ## 🚀 Next Project
+
 <a href="https://github.com/blueyaGIT/cub3d"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=BF94E4&width=435&lines=cub3d"></a> -->
 
 ## ⏳ Previous Project
