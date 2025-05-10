@@ -1,0 +1,25 @@
+# PHILO GITIGNORE #
+
+# Compiled source #
+# philo
+*.out
+
+# Object files #
+*.o
+
+# Libraries #
+*.a
+
+# Test files #
+
+# Subjet files #
+*.pdf
+
+# Weird stuff #
+.DS_Store
+.vscode
+.*.swp
+
+*.dot
+.venv
+*.svg
