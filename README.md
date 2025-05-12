@@ -1,3 +1,14 @@
+<p align="center">
+  <img src="https://github.com/blueyaGIT/blueyaGIT/blob/master/42_badges/philosophersn.png?raw=true" alt="philo"/>
+</p>
+
+<p align="center">
+  Score: <i>WIP/100</i><br>
+  Finished: <i>??.??.2025</i><br>
+</p>
+
+###
+
 # Philosophers
 Philosophers is a multithreaded dining philosophers problem simulator. The problem is a classic multi-process synchronization problem which was originally formulated in 1965 by Edsger Dijkstra.
 
