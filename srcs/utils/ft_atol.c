@@ -6,12 +6,16 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 13:29:21 by dalbano           #+#    #+#             */
-/*   Updated: 2025/05/24 13:34:14 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/06/01 14:40:23 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
+/**
+ * @brief just like ft_atoi but for long
+ * @return nbr of type long
+ */
 long	ft_atol(const char *str)
 {
 	int		sign;

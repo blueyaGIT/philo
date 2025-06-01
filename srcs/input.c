@@ -6,12 +6,33 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 13:19:12 by dalbano           #+#    #+#             */
-/*   Updated: 2025/05/24 13:55:54 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/06/01 14:39:15 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
+/**
+ * @brief Validates the core simulation parameters for the dining philosophers problem
+ * 
+ * This function performs comprehensive validation of the essential simulation parameters
+ * to ensure they meet the requirements for a valid dining philosophers simulation.
+ * It checks for proper ranges, minimum timing constraints, and maximum value limits.
+ * 
+ * Validation rules:
+ * - All values must be non-negative
+ * - Number of philosophers: 1-200 (inclusive)
+ * - Time values: minimum 60ms, maximum INT_MAX
+ * 
+ * @param num_philo Number of philosophers participating in the simulation
+ * @param die_time Maximum time (in milliseconds) a philosopher can go without eating
+ * @param eat_time Time (in milliseconds) it takes for a philosopher to eat
+ * @param sleep_time Time (in milliseconds) a philosopher spends sleeping
+ * @return true if all parameters are valid, false otherwise
+ * 
+ * @note This function prints specific error messages to stdout when validation fails
+ * @note The 60ms minimum for time values ensures the simulation runs at a reasonable pace
+ */
 static bool	check_input(long num_philo, long die_time, long eat_time,
 		long sleep_time)
 {
@@ -35,6 +56,29 @@ static bool	check_input(long num_philo, long die_time, long eat_time,
 	return (true);
 }
 
+/**
+ * @brief Parses and validates command-line arguments for the dining philosophers simulation
+ * 
+ * This function processes the command-line arguments provided to the program, converts
+ * them from strings to appropriate numerical values, and validates their correctness.
+ * It handles both mandatory parameters (philosopher count and timing values) and
+ * the optional number of meals parameter.
+ * 
+ * Expected input format:
+ * - input[0]: number_of_philosophers (1-200)
+ * - input[1]: time_to_die (≥60ms, ≤INT_MAX)
+ * - input[2]: time_to_eat (≥60ms, ≤INT_MAX)
+ * - input[3]: time_to_sleep (≥60ms, ≤INT_MAX)
+ * - input[4]: [optional] number_of_times_each_philosopher_must_eat (≥1, ≤INT_MAX)
+ * 
+ * @param data Pointer to the data structure to be populated with parsed values
+ * @param input Array of string arguments from command line (starting from argv[1])
+ * @return true if all inputs are successfully parsed and validated, false otherwise
+ * 
+ * @note If input[4] is not provided, num_meals is set to -1 (unlimited meals)
+ * @note The function uses ft_atol() for string-to-long conversion
+ * @note Prints specific error messages for different validation failures
+ */
 bool	handle_input(t_data *data, char **input)
 {
 	data->num_philo = ft_atol(input[0]);
