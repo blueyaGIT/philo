@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 13:19:12 by dalbano           #+#    #+#             */
-/*   Updated: 2025/06/03 10:34:15 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/06/03 10:34:25 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,8 @@ static bool	check_input(long num_philo, long die_time, long eat_time,
  * @param data Pointer to the data structure to be populated with parsed values
  * @param input Array of string arguments from command
  * line (starting from argv[1])
- * @return true if all inputs are successfully parsed and validated, false otherwise
+ * @return true if all inputs are successfully parsed
+ * and validated, false otherwise
  * 
  * @note If input[4] is not provided, num_meals is set to -1 (unlimited meals)
  * @note The function uses ft_atol() for string-to-long conversion
