@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 13:45:26 by dalbano           #+#    #+#             */
-/*   Updated: 2025/06/01 14:37:51 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/06/03 10:36:37 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@
  * @note If any mutex creation fails, the function returns false and the
  *       caller should handle cleanup and error reporting
  */
-bool table_init(t_table *table, t_data *data)
+bool	table_init(t_table *table, t_data *data)
 {
 	memset(table, 0, sizeof(t_table));
 	table->data = data;
