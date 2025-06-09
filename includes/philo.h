@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 13:52:11 by dalbano           #+#    #+#             */
-/*   Updated: 2025/05/24 14:07:28 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/06/09 14:12:05 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,16 +84,21 @@ typedef enum e_error_type
 	THREAD,
 	MUTEX,
 	TIME,
-	PHILO
+	PHILO,
+	PHILO_MALLOC
 }					t_error_type;
 
 /* FUNCS */
 bool				handle_input(t_data *data, char **input);
 t_philo				**philos_init(t_table *table);
 bool				table_init(t_table *table, t_data *data);
+
 /* HELPER FUNCS */
 long				ft_atol(const char *str);
 bool				create_mutex(pthread_mutex_t *mutex);
 void				error_msg(t_error_type type);
+void				free_phils(t_philo **phils, int length);
+void				kill_all_mutex(t_table *table, long length);
+void				destroy_mutex(pthread_mutex_t *mutex);
 
 #endif /* PHILO_H */
