@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 13:52:14 by dalbano           #+#    #+#             */
-/*   Updated: 2025/06/03 10:35:39 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/06/09 14:14:29 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int	main(int ac, char **av)
 		return (EXIT_FAILURE);
 	philos = philos_init(&table);
 	(void)philos;
+	TEST("T1\n");
 	return (0);
 }
