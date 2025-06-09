@@ -37,6 +37,7 @@ SRCS	:=	main.c \
 
 # UTILS
 SRCS	+=	error_msg.c \
+			free.c \
 			ft_atol.c \
 			init.c \
 			mutex_utils.c \
